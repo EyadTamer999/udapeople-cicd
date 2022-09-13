@@ -5,7 +5,6 @@ Parameters:
   WorkflowID:
     Description: Unique identifier.
     Type: String
-    Default: "a97kn6jg"
 
 
 Resources:
