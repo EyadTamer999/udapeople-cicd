@@ -1,6 +1,5 @@
 Description: >
   UdaPeople backend stack.
-
 Parameters:
   ID:
     Description: Unique identifier.
@@ -10,7 +9,7 @@ Resources:
   InstanceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupName: !Sub udapeople-${ID}
+      GroupName: !Sub UdaPeople-${ID}
       GroupDescription: Allow port 9100, 22 and port 3030.
       SecurityGroupIngress:
         - IpProtocol: tcp
@@ -33,9 +32,9 @@ Resources:
       SecurityGroups:
         - Ref: InstanceSecurityGroup
       KeyName: udacity
-      ImageId: ami-052efd3df9dad4825
+      ImageId: ami-08d4ac5b634553e16
       Tags:
         - Key: Name
           Value: !Sub backend-${ID}
         - Key: Project
-          Value: udapeople
+          Value: Udapeople
