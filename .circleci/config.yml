@@ -232,8 +232,6 @@ jobs:
           command: |
             cd backend
             sudo npm install
-            sudo npm audit fix --audit-level=critical --force
-            sudo npm run build
             sudo npm run migrations > migration.log
       - run:
           name: Send migration status to kvdb.io
